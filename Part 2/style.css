@@ -1,43 +1,56 @@
 header {
-
-
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  
 }
 
 
 h2 {
-
+  border: black 1px solid;
+  width: 33%;
 }
 
 .nav {
-
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
 
 }
 
-  .aside {
+li {
+  list-style: none;
+  border: 1px black solid;
+  width: 19%;
 
+}
+
+.content{
+  display: flex;
+  border: 1px black solid;
+}
+
+  .aside {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    text-align: center;
+    border: 1px black solid;
   }
 
   .slidebox{
-
-   
+    border: 1px black solid;
   }
 
   .article{
-
+    display: flex;
+    width: 67%;
   }
 
 
 .poem{
-
+  width: 50%;
+  border: 1px black solid;
 }
 
 
@@ -45,29 +58,40 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
-
-  } 
-header{
-
-}
+      flex-direction: column;
+    } 
+    header{
+      display: none;
+    }
+    .poem {
+      width: 100%;
+    }
+    ul {
+      padding: 0;
+    }
 }
 
 /*  Small devices    */
 @media (max-width:599px) {
 
-header,.content{
+  header,.content{
+    display: none;
+  }
 
-}
-
-.nav {
-
+  .nav {
+    flex-direction: column;
 
   }
 
 
-.nav > li {
+  .nav > li {
+    width: 100%;
+    margin-bottom: 80px;
+  }
 
-}
+  ul {
+    padding: 0;
+  }
 
 
 }
